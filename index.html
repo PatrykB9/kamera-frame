@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .frame {
+      width: 100%;
+      height: 100%;
+      padding: 15px; /* grubość ramki */
+      box-sizing: border-box;
+      background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0);
+      background-size: 600% 600%;
+      animation: gradientMove 8s ease infinite;
+    }
+
+    .content {
+      width: 100%;
+      height: 100%;
+      background: transparent; /* miejsce na Twoją kamerkę */
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="content"></div>
+  </div>
+</body>
+</html>
